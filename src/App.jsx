@@ -6,6 +6,8 @@ import ActivitiesPage from "./pages/activities/ActivitiesPage";
 import { ToastContainer } from "react-toastify";
 import ActivityDetailPage from "./pages/activityDetail/ActivityDetailPage";
 import DefaultLayout from "./layouts/DefaultLayout";
+import CategoriesPage from "./pages/categories/CategoriesPage";
+import PromoPage from "./pages/promo/PromoPage";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/activities" element={<ActivitiesPage />} />
           <Route path="/activities/:id" element={<ActivityDetailPage />} />
+          <Route path="/categories" element={<CategoriesPage />} />
+          <Route path="/promo" element={<PromoPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -2,14 +2,17 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Footer from "../../components/footer";
 import Navbar from "../../components/NavBar";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const ITEMS_PER_PAGE = 6;
 
 const ActivitiesPage = () => {
+  const location = useLocation();
+  const categoryFromState = location.state?.category || "All";
+
   const [activities, setActivities] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState(categoryFromState);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -113,7 +116,11 @@ const ActivitiesPage = () => {
       {/* Konten utama dengan grow */}
       <main className="flex-grow">
         <div className="max-w-6xl mx-auto px-4 py-8">
-          <h1 className="text-4xl font-bold mb-8 text-center">Activities</h1>
+          <h1 className="text-4xl font-bold mb-2 text-center">Activities</h1>
+          <p className="text-center text-gray-600 mb-8">
+            Explore our curated list of exciting activities to make your journey
+            unforgettable.
+          </p>
 
           {/* Filter Section */}
           <div className="mb-8 flex flex-col md:flex-row md:justify-between md:items-center gap-4">
