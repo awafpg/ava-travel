@@ -79,23 +79,21 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="flex h-screen">
-      {/* Left side image */}
-      <div className="w-1/2 hidden md:block">
-        <img
-          src="/bg-travel.png"
-          alt="Travel background"
-          className="w-full h-full object-cover"
-        />
-      </div>
+    <div
+      className="min-h-screen flex items-center justify-center bg-cover bg-center relative overflow-auto px-4 py-10"
+      style={{ backgroundImage: "url(/bg-travel.png)" }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/30 z-0" />
 
-      {/* Right side form */}
-      <div className="w-full md:w-1/2 flex items-center justify-center bg-white px-8 overflow-y-auto py-6">
-        <div className="max-w-md w-full space-y-6">
-          <h2 className="text-3xl font-bold text-gray-800">
+      {/* Floating Form with animation */}
+      <div className="relative z-10 w-full max-w-md bg-white/40 backdrop-blur-md rounded-xl shadow-lg p-8 space-y-6 animate-fadeIn transition duration-300">
+        {/* Centered Form */}
+        {/* <div className="relative z-10 w-full flex items-center justify-center px-4"> */}
+        <div className="w-full max-w-md space-y-6 bg-white/40 rounded-xl shadow-lg p-8 mx-auto">
+          <h2 className="text-3xl font-bold text-gray-800 text-center">
             Create an Account
           </h2>
-
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-gray-600">
@@ -194,6 +192,15 @@ const RegisterPage = () => {
               {loading ? "Registering..." : "Register"}
             </button>
           </form>
+          <p className="text-center text-gray-700 text-sm mt-4">
+            Sudah punya akun?{" "}
+            <a
+              href="/login"
+              className="text-blue-600 hover:underline font-semibold"
+            >
+              Login di sini
+            </a>
+          </p>
         </div>
       </div>
     </div>

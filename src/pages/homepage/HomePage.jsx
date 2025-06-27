@@ -12,8 +12,8 @@ export const HomePage = () => {
 
   return (
     <div>
-      <header className="bg-white py-16 px-6 md:px-12" id="home">
-        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
+      <header className="bg-white py-16" id="home">
+        <div className="max-w-7xl p-6 mx-auto flex flex-col-reverse md:flex-row items-center gap-10">
           {/* Left Side: Text */}
           <div className="flex-1 text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-extrabold text-gray-900 leading-tight">
@@ -40,11 +40,7 @@ export const HomePage = () => {
           </div>
         </div>
       </header>
-      <section
-        id="destinations"
-        aria-label="Destinations"
-        className="max-w-6xl mx-auto"
-      >
+      <section id="destinations" aria-label="Destinations" className="mx-auto">
         <DestinationSection />
         <PromoSection />
       </section>
