@@ -33,7 +33,7 @@ export const HomePage = () => {
           {/* Right Side: Image */}
           <div className="flex-1">
             <img
-              src="/src/assets/images/home/header.png"
+              src="/header.png"
               alt="Travel header"
               className="w-full rounded-xl "
             />
