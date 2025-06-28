@@ -6,7 +6,6 @@ const menuItems = [
   { key: "user", label: "Manage User" },
   { key: "category", label: "Manage Category" },
   { key: "activity", label: "Manage Activity" },
-  { key: "payment", label: "Manage Payment Method" },
   { key: "transaction", label: "Manage Transaction" },
 ];
 

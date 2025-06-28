@@ -1,4 +1,11 @@
 import React from "react";
+import ManageBanner from "../pages/dashboard/ManageBanner";
+import ManagePromo from "../pages/dashboard/ManagePromo";
+import ManageUser from "../pages/dashboard/ManageUser";
+import ManageCategory from "../pages/dashboard/ManageCategory";
+import ManageActivity from "../pages/dashboard/ManageActivity";
+
+import ManageTransaction from "../pages/dashboard/ManageTransaction";
 
 const DashboardContent = ({ activeMenu }) => {
   return (
@@ -7,17 +14,12 @@ const DashboardContent = ({ activeMenu }) => {
         {activeMenu.replace("-", " ")}
       </h1>
       {/* Render komponen konten masing-masing sesuai activeMenu */}
-      {activeMenu === "banner" && <p>Banner management content here.</p>}
-      {activeMenu === "promo" && <p>Promo management content here.</p>}
-      {activeMenu === "user" && <p>User management content here.</p>}
-      {activeMenu === "category" && <p>Category management content here.</p>}
-      {activeMenu === "activity" && <p>Activity management content here.</p>}
-      {activeMenu === "payment" && (
-        <p>Payment method management content here.</p>
-      )}
-      {activeMenu === "transaction" && (
-        <p>Transaction management content here.</p>
-      )}
+      {activeMenu === "banner" && <ManageBanner />}
+      {activeMenu === "promo" && <ManagePromo />}
+      {activeMenu === "user" && <ManageUser />}
+      {activeMenu === "category" && <ManageCategory />}
+      {activeMenu === "activity" && <ManageActivity />}
+      {activeMenu === "transaction" && <ManageTransaction />}
     </div>
   );
 };
