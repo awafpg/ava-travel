@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png";
+import logo from "../../public/logo.png"; // Adjust the path as necessary
 import { Menu, X } from "lucide-react";
 import AuthButtons from "./AuthButton";
 import ProfileDropdown from "./ProfileDropDown";
