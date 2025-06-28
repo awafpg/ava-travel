@@ -13,6 +13,8 @@ import CartPage from "./pages/cart/CartPage";
 import TransactionPage from "./pages/transactions/TransactionPage";
 import DetailTransactionPage from "./pages/transactions/DetailTransactionPage";
 import ProtectedRoute from "./components/ProtectedRoute";
+import AdminRoute from "./components/AdminRoute";
+import AdminDashboard from "./pages/dashboard/AdminDashboard";
 
 function App() {
   return (
@@ -43,6 +45,9 @@ function App() {
           </Route>
           <Route path="/categories" element={<CategoriesPage />} />
           <Route path="/promo" element={<PromoPage />} />
+          <Route element={<AdminRoute />}>
+            <Route path="/dashboard" element={<AdminDashboard />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
